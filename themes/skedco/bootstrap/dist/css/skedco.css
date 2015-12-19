@@ -1,0 +1,611 @@
+/* Calls to @font-face */
+@font-face {
+  font-family: 'VitesseBold-NO';
+  src: url('../fonts/VitesseSans-Bold.otf') format("opentype");
+}
+@font-face {
+  font-family: 'VitesseMed-NO';
+  src: url('../fonts/VitesseSans-Medium.otf') format("opentype");
+}
+@font-face {
+  font-family: 'VitesseBook-NO';
+  src: url('../fonts/VitesseSans-Book.otf') format("opentype");
+}
+@font-face {
+  font-family: 'VitesseLt-NO';
+  src: url('../fonts/VitesseSans-Light.otf') format("opentype");
+}
+@font-face {
+  font-family: 'WebSymbols';
+  src: url('../fonts/WebSymbols-Regular.otf') format("opentype");
+}
+
+/* Global styles */
+
+body { padding-bottom: 0; color: #333333; font-family: Helvetica, Arial, arial, sans-serif; }
+#breadcrumbs { display:none; }
+hr { background: url('../../../img/hr-pattern.png') repeat-x; height: 7px; border: 0; }
+
+/* Global typography */
+
+h1, h5, h6 { font-family: VitesseMed; }
+h2 { font-family: VitesseMed; font-size: 28px; }
+h3 { font-family: VitesseMed; font-size: 18px; }
+.emphasis { color: rgb(91,187,145); color: rgba(91,187,145,1); clear: left; margin-top: 0; }
+h3 a { color: rgb(51,51,51); color: rgba(51,51,51,1); text-decoration: underline; }
+.content-group h3 small { color: rgb(91,187,145); color: rgba(91,187,145,1); margin-left: 2px; font-size: 18px; text-decoration: none; }
+h4 { font-family: VitesseMed; font-size: 18px; margin-bottom: 0; }
+h4 a { color: rgb(91,187,145); color: rgba(91,187,145,1); }
+small { font-family: VitesseLt; font-size: 12px; color: rgb(51,51,51); color: rgba(51,51,51,1); margin-top: 2px; }
+.chunk.content { width: 85px; display: block; }
+.chunk.content.first { float: none; display: inline; }
+a { color: rgb(91,187,145); color: rgba(91,187,145,1); }
+a:hover { color: rgb(112,221,173); color: rgba(112,221,173,1); text-decoration: none; }
+p { font-size: 13px; }
+.center-text { text-align: center; }
+.centered { text-align: center !important; }
+.masthead h1,.masthead h2, .masthead p {display:none;}
+
+/* Form and button styles */
+
+input.btn-padded, .btn-primary, .hp-ask-bud a, .hp-subway-evac-system a, .hp-sked-basic-rescue-system a, .hp-dealer a, .hp-grant a, .dealer-contact .textarea-container button, .page-template-template-dealers-php .field-wrap.submit-wrap.label-above input, .subfooter .contact #nf_submit_2 input, .woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt { background: #02ab61; /* Old browsers */ background: -moz-linear-gradient(top,  #02ab61 0%, #008e4f 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#02ab61), color-stop(100%,#008e4f)); /* Chrome,Safari4+ */ background: -webkit linear-gradient(top,  #02ab61 0%,#008e4f 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(top,  #02ab61 0%,#008e4f 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(top,  #02ab61 0%,#008e4f 100%); /* IE10+ */ background: linear-gradient(to bottom,  #02ab61 0%,#008e4f 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02ab61', endColorstr='#008e4f',GradientType=0 ); /* IE6-9 */ -webkit-border-radius: 20px; border-radius: 20px; }
+
+input.btn-padded:hover, .btn-primary:hover, .hp-ask-bud a:hover, .hp-subway-evac-system a:hover, .hp-sked-basic-rescue-system a:hover, .hp-dealer a:hover, .hp-grant a:hover, .dealer-contact .textarea-container button:hover, .page-template-template-dealers-php .field-wrap.submit-wrap.label-above input:hover, .subfooter .contact #nf_submit_2 input:hover, .woocommerce #content input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce-page #content input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover, .woocommerce #content input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce-page #content input.button.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce-page input.button.alt:hover { background: -moz-linear-gradient(bottom,  #02ab61 0%, #008e4f 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,#02ab61), color-stop(100%,#008e4f)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(bottom,  #02ab61 0%,#008e4f 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(bottom,  #02ab61 0%,#008e4f 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(bottom,  #02ab61 0%,#008e4f 100%); /* IE10+ */ background: linear-gradient(to top,  #02ab61 0%,#008e4f 100%); /* W3C */ }
+
+.hp-sked-basic-rescue-system a, .hp-subway-evac-system a, .hp-ask-bud a, input.btn-padded, .btn-primary, .hp-dealer a, .hp-grant a, .dealer-contact .textarea-container button, .page-template-template-dealers-php .field-wrap.submit-wrap.label-above input, .subfooter .contact #nf_submit_2 input, .woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt, .woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button { font-family: VitesseMed;color: rgb(255,255,255); color: rgba(255,255,255,1); border: 0; text-transform: uppercase; letter-spacing: 1px; }
+
+.hp-sked-basic-rescue-system a, .hp-subway-evac-system a, .hp-ask-bud a, input.btn-padded, .btn-primary, .hp-dealer a, .hp-grant a, .dealer-contact .textarea-container button, .page-template-template-dealers-php .field-wrap.submit-wrap.label-above input, .subfooter .contact #nf_submit_2 input, .woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, .woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt { font-size: 13px; }
+
+.hp-sked-basic-rescue-system a, .hp-subway-evac-system a, .hp-ask-bud a, input.btn-padded { padding: 10px; clear: both; }
+
+.hp-ask-bud a { padding: 10px 44px; }
+
+input.btn-padded, .subfooter .contact #nf_submit_2 input { padding: 10px 44px 7px 44px !important; line-height: normal; }
+
+.hp-dealer a { margin: 30px 0; }
+
+.hp-dealer a, .hp-grant a, .woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button { padding: 10px; }
+
+.dealer-contact .textarea-container button, .page-template-template-dealers-php .field-wrap.submit-wrap.label-above input { margin-top: 10px; padding: 8px 30px; }
+
+.woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button { 
+font-size: 10px; text-shadow: none; font-weight: normal; max-width: 78%; text-align: center; display: block; margin: 0 auto; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+
+/* List styles */
+
+article ul { padding-left: 0; margin-bottom: 20px; }
+article ul li { background: url('../../../img/diamond.png') no-repeat left 4px; list-style: none; padding: 0 0 10px 20px; line-height: 19px; }
+.checkout ul li, .cart ul li { background: none; list-style: none; }
+
+/* Responsive Images */
+.wp-caption, .wp-caption img  { max-width: 100%; height: auto; }
+.term-fire-rescue .masthead img { max-width: none; }
+.wp-caption-text { margin: 10px 0 0 0; font-size: 13px !important; }
+.alignleft { float: left; margin: 0 20px 0 0; }
+.alignright { float: right; margin: 0 0 0 20px; }
+
+/* Header/Nav styles */
+
+.navbar-wrapper-wrapper { position: absolute; top: 23px; width: 100%; z-index: 10; }
+.navbar-wrapper-wrapper .container { height: 40px; background: rgb(0,0,0); background: rgba(0,0,0,1); }
+.navbar-wrapper { top: 14px !important; }
+.navbar-wrapper .container { height:86px !important; background: rgb(0,0,0); background: rgba(0,0,0,1); }
+.navbar-wrapper .container .container { background: transparent; }
+.navbar-inverse { background-color: transparent; border: 0; position: relative; }
+nav.nav { float: none; }
+.navbar { margin-bottom: 0; }
+.navbar-header { float: none; }
+.navbar-brand { background: url('../../../img/logo2.png') 0 0 no-repeat; text-indent: -20000px; overflow: hidden; display: block; width: 102px; height: 85px; margin: -10px 10px 0 20px !important; position: absolute; }
+.nav ul li { float: none; list-style: none; margin: 5px 0 0 0; clear: left; }
+.nav ul li .dropdown-menu { display: block; }
+.nav ul li a { font-size: 14px; font-family: VitesseMed; color: rgb(255,255,255) !important; color: rgba(255,255,255,1) !important; text-transform: uppercase; padding: 0; }
+.nav ul li a:hover { color: rgb(112,221,173) !important; color: rgba(112,221,173,1) !important; }
+.nav ul li .dropdown-menu { background-color: transparent; border: 0; position: relative; margin-left: 20px; margin-bottom: 12px; display: none; }
+.nav ul li .dropdown-menu > li { width: 100%; }
+.nav ul li .dropdown-menu > li > a:hover { background-color: transparent !important; color: rgb(112,221,173) !important; color: rgba(112,221,173,1) !important; }
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus { background-color: transparent; color: rgb(112,221,173) !important; color: rgba(112,221,173,1) !important; }
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus { background-color: rgb(112,221,173) !important; background-color: rgba(112,221,173,1) !important; }
+.social-links { float: none; margin-top: 2px; position: relative; }
+.navbar-collapse.collapse { display: none !important; }
+.navbar-collapse.collapse.in { display: block !important; overflow: visible; background:rgb(0,0,0); background:rgba(0,0,0,1); }
+.navbar-collapse.collapse .search-box.collapse.in { position: relative; clear: left; padding-bottom: 20px; margin-left: -30px; background: rgb(0,0,0); background: rgba(0,0,0,1); }
+.navbar-collapse.collapse .search-box.collapse.in input { width: 225px; margin-left: 30px; }
+.no-transition { -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none; transition: none; }
+.search-box.collapsing { height: 0 !important; }
+.social-links a { color: rgb(255,255,255); color: rgba(255,255,255,1); display: block; float: left; margin: 18px 10px 20px 0; }
+.social-links a.youtube { background: url('../../../img/youtube.png') no-repeat; text-indent: -20000px; overflow: hidden; display: block; width: 20px; height: 22px; float: left; }
+.social-links .gplus { background: url('../../../img/gplus.png') no-repeat; text-indent: -20000px; overflow: hidden; display: block; width: 21px; height: 18px; float: left; }
+.social-links .fb { background: url('../../../img/fb.png') no-repeat; text-indent: -20000px; overflow: hidden; display: block; width: 10px; height: 20px; float: left; }
+.social-links a span { color: rgb(255,255,255); color: rgba(255,255,255,1); }
+.navbar .cart { background: rgb(0,0,0) !important; background: rgba(0,0,0,1) !important; float: none; height: auto; width: 80px; padding: 0; }
+.navbar .cart a { color: rgb(255,255,255) !important; color: rgba(255,255,255,1) !important; font-size: 14px !important; }
+.navbar .cart a span { color: rgb(255,255,255); color: rgba(255,255,255,1); font-size: 28px; top: 7px; }
+
+/* Homepage carousel */
+
+.carousel { max-width: 750px; margin: 0 auto; overflow: hidden; height: 262px !important; }
+.carousel-inner > .item > img { height: 288px !important; width:750px !important; }
+.carousel .item { height: 288px !important; width:750px !important; }
+.carousel-inner h1 {font-size:25px;width:50%;}
+.carousel-inner p {font-size:15px;margin-top:-10px; line-height:1.25;display:none; }
+.carousel-caption { bottom: 15px; text-align: left; width: 40%; width:60% !important; left:10% !important; padding-bottom:0 !important;}
+.btn-carousel { position:absolute; bottom: -34px; height: 73px; width: 191px; right: -143px; text-indent:-20000px; }
+.carousel-control.left, .carousel-control.right { margin: 0; }
+.topic-banner-bg { position: absolute; bottom: 0; width: 100%; z-index: 10; background: rgb(0,0,0); opacity: .3; height: 45px; }
+.topic-banner { position: absolute; bottom: 0; width: 100%; z-index: 19; }
+.topic-banner ul { margin-bottom: 5px; }
+.topic-banner ul li { list-style: none; float: left; margin-right: 31px; position: relative; }
+.topic-banner ul li:last-child { margin-right: 0; }
+.hover-shape { position: absolute; display: none; width: 0; height: 0; line-height: 0; border: 1.5em solid transparent; margin-top: -1.5em; border-bottom: 1.5em solid rgb(0,0,0); opacity: .3; left: 50%; top: -27px; margin-left: -21px; }
+.topic-banner ul li:hover .hover-shape { display: block; }
+.topic-banner ul li a { display: block; font-size: 12px; font-family: VitesseMed; color: rgb(255,255,255); color: rgba(255,255,255,1); padding: 11px 0 0 44px; height: 34px; }
+.topic-banner ul li a.fire-rescue { background: url('../../../img/fire.png') no-repeat; }
+.topic-banner ul li a.medical { background: url('../../../img/medical.png') no-repeat; }
+.topic-banner ul li a.hazmat { background: url('../../../img/hazmat.png') no-repeat; }
+.topic-banner ul li a.industrial { background: url('../../../img/industrial.png') no-repeat; }
+.topic-banner ul li .energy { background: url('../../../img/energy.png') no-repeat; }
+.topic-banner ul li a.military { background: url('../../../img/military.png') no-repeat; }
+
+/* Homepage body */
+
+/* Panel 1 */
+.content-group.rescue-industry-news h3 { background: url('../../../img/news-icon.png') no-repeat; padding: 8px 0 6px 42px; margin-left: 0; }
+.content-group.rescue-equipment-blog h3 { background: url('../../../img/industry-news-icon.png') no-repeat; padding: 8px 0 6px 42px; margin-left: 0; }
+.content-group.life-saving-training-techniques h3 { background: url('../../../img/training-icon.png') no-repeat; padding: 8px 0 6px 42px; margin-left: 0; }
+.content-group.military h3 { background: url('../../../img/military-icon.png') no-repeat; padding: 8px 0 6px 42px; margin-left: 0; }
+.content-group.fp-forum h3 { background: url('../../../img/rescue-forum-icon.png') no-repeat; padding: 8px 0 6px 42px; margin-left: 0; }
+.content-group h3 { background: url('../../../img/industry-news-icon.png') no-repeat; padding: 8px 0 6px 42px; margin-left: 0; }
+.content-group span { display:block;}
+.content-group span small { width:85px; display:block; float:left;}
+.fp-forum li { list-style: none; }
+.fp-forum h1 { font-size: 13px; color: rgb(102,102,102); color: rgba(102,102,102,1); font-family: VitesseLt; text-transform: uppercase; }
+.fp-forum li ul { padding-left: 20px; }
+.fp-forum li ul li { list-style-image: url('../../../img/red-asterisk.png'); padding: 0 0 10px 0; line-height: normal; background: none; }
+.fp-forum li ul li:last-child { padding-bottom: 0; }
+.fp-forum li ul li a { font-size: 20px; }
+.fp-forum #bbp_topics_widget-7 ul { padding-left: 0; }
+.fp-forum #bbp_topics_widget-7 ul li { list-style: none; padding-bottom: 5px; }
+.fp-forum #bbp_topics_widget-7 ul li:last-child { padding-bottom: 0; }
+.fp-forum #bbp_topics_widget-7 ul li a { font-size: 14px; }
+.industry-news img, .rescue-equipment img, .training-techniques img, .fire-rescue img { float: none; margin: 0; }
+.industry-news p a, .rescue-equipment p a, .training-techniques p a, .fire-rescue p a { display: inline; }
+.industry-news a, .rescue-equipment a, .training-techniques a, .fire-rescue a { display: block; }
+
+/* Panel 2 */
+.hp-ask-bud { margin: 10px 0 30px 0; }
+.hp-ask-bud h2 { margin-bottom: 0; }
+.hp-ask-bud small { color: rgb(255,97,0); color: rgba(255,97,0,1); font-size: 18px; letter-spacing: 1px; float: none; width: auto; text-transform: uppercase; }
+.hp-ask-bud p { font-size: 16px; font-family: VitesseBook; padding: 10px 0 0 0; }
+
+
+/* Panel 3 */
+.hp-subway-evac-system { background: url('../../../img/subway.jpg') no-repeat -340px; margin: 10px 0 28px 0; padding-bottom: 32px; height: 336px; }
+.hp-subway-evac-system small { color: rgb(255,97,0); color: rgba(255,97,0,1); font-size: 14px; letter-spacing: 1px; float: none; text-transform: uppercase; clear: both; text-align: center; display: block; }
+.hp-subway-evac-system h2 { color: rgb(255,255,255); color: rgba(255,255,255,1); float: none; text-align: center; padding-top: 20px; font-size: 26px; }
+.hp-subway-evac-system p { font-size: 15px; font-family: VitesseBook; padding: 10px 0 0 0; color: rgb(255,255,255); color: rgba(255,255,255,1); clear: both; text-align: center; }
+.hp-sked-basic-rescue-system { background: url('../../../img/hp-sked-basic-rescue-system.jpg') no-repeat top right; margin: 10px 0 28px 0; padding-bottom: 32px; height: 336px; }
+.hp-sked-basic-rescue-system small { color: rgb(255,97,0); color: rgba(255,97,0,1); font-size: 14px; letter-spacing: 1px; float: none; width: auto; text-transform: uppercase; clear: both; text-align: center; display: block; }
+.hp-sked-basic-rescue-system h2 { color: rgb(255,255,255); color: rgba(255,255,255,1); float: none; text-align: center; padding-top: 20px; font-size: 26px; }
+.hp-sked-basic-rescue-system p { font-size: 15px; font-family: VitesseBook; padding: 10px 0 0 0; color: rgb(255,255,255); color: rgba(255,255,255,1); clear: both; text-align: center; }
+.hp-sked-basic-rescue-system { background-size: 700px; background-color:black; background-position: -40px -40px; }
+.hp-sked-basic-rescue-system h2,.hp-sked-basic-rescue-system p,.hp-sked-basic-rescue-system small { padding-left:50% !important; text-align:left !important; }
+.hp-sked-basic-rescue-system h2 { padding-top:50px !important; }
+
+/* Product Panel */
+.product-tag-icons { position: absolute; top: 0; right: 0; }
+.product-tag-icons span { width: 32px; height: 32px; display: block; margin: 5px; }
+.product-tag-icons span a { display:block; height:100%; }
+.product-tag-icons .fire-rescue { background: url('../../../img/fire-orange.png') no-repeat; }
+.product-tag-icons .medical { background: url('../../../img/med-kit.png') no-repeat; }
+.product-tag-icons .military { background: url('../../../img/military-green.png') no-repeat; }
+.product-tag-icons .hazmat { background: url('../../../img/hazmat-yellow.png') no-repeat; }
+.product-tag-icons .industrial { background: url('../../../img/industrial-blue.png') no-repeat; }
+.woocommerce ul.products li.product h3, .woocommerce-page ul.products li.product h3 { font-size: 18px; }
+.woocommerce ul li a h3, .woocommerce ul li a span { text-align: center; color: rgb(51,51,51); color: rgba(51,51,51,1); }
+
+/* Dealer/Grant Panel */
+.hp-dealer { background: url('../../../img/global-icon.png') no-repeat top left; padding: 0 20px 0 100px; margin-top: 10px; margin-bottom: 33px; }
+.hp-dealer p { margin: 30px 0; }
+.hp-grant { background: url('../../../img/grant-icon.png') no-repeat top left; padding: 0 20px 0 100px; margin-top: 10px; margin-bottom: 33px; }
+.hp-grant p { margin: 30px 0; }
+
+
+/* Products Page */
+.woocommerceNOPE .container.main { margin-top: 124px; }
+.woocommerce #content div.product .product_title, .woocommerce div.product .product_title, .woocommerce-page #content div.product .product_title, .woocommerce-page div.product .product_title { color: rgb(51,51,51); color: rgba(51,51,51,1); font-size: 38px; margin-top: 20px; }
+.sku_wrapper { color: rgb(51,51,51); color: rgba(51,51,51,1); font-size: 13px; display: block; }
+.posted_in { color: rgb(51,51,51); color: rgba(51,51,51,1); font-size: 13px; display: block; }
+.woocommerce .product_meta .product-tag-icons { position: relative; top: auto; right: auto; }
+.woocommerce .product_meta .product-tag-icons span { float: left; }
+.woocommerce #content div.product form.cart, .woocommerce div.product form.cart, .woocommerce-page #content div.product form.cart, .woocommerce-page div.product form.cart { height: 100%; width: 100%; float: left; display: block; padding: 0; margin-top: 20px; }
+.woocommerce .cart { background: transparent; }
+.woocommerce #content div.product form.cart .variations label, .woocommerce div.product form.cart .variations label, .woocommerce-page #content div.product form.cart .variations label, .woocommerce-page div.product form.cart .variations label { color: rgb(51,51,51); color: rgba(51,51,51,1); font-size: 16px; padding: 8px 0 0 0; }
+.woocommerce .cart a { color: rgb(133, 173, 116); color: rgba(133, 173, 116, 1); font-size: 13px; }
+.woocommerce .cart a:hover { color: rgb(112,221,173); color: rgba(112,221,173,1); }
+.woocommerce #content div.product form.cart .variations select, .woocommerce div.product form.cart .variations select, .woocommerce-page #content div.product form.cart .variations select, .woocommerce-page div.product form.cart .variations select {  font-size:1.25em; height:1.5em; border-radius: 0; }
+.woocommerce #content div.product p.price, .woocommerce #content div.product span.price, .woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce-page #content div.product p.price, .woocommerce-page #content div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page div.product span.price { color: rgb(51,51,51); color: rgba(51,51,51,1); font-size: 20px; }
+.woocommerce #content .quantity input.qty, .woocommerce .quantity input.qty, .woocommerce-page #content .quantity input.qty, .woocommerce-page .quantity input.qty { border: 1px solid rgb(166,166,166); border: 1px solid rgba(166,166,166,1); }
+.woocommerce #content .quantity .minus, .woocommerce .quantity .minus, .woocommerce-page #content .quantity .minus, .woocommerce-page .quantity .minus { display: none; }
+.woocommerce #content .quantity .plus, .woocommerce .quantity .plus, .woocommerce-page #content .quantity .plus, .woocommerce-page .quantity .plus { display: none; }
+.woocommerce #content div.product form.cart div.quantity, .woocommerce div.product form.cart div.quantity, .woocommerce-page #content div.product form.cart div.quantity, .woocommerce-page div.product form.cart div.quantity { margin: 3px 4px 0 0; }
+.woocommerce #content div.product div.thumbnails a, .woocommerce div.product div.thumbnails a, .woocommerce-page #content div.product div.thumbnails a, .woocommerce-page div.product div.thumbnails a { width: auto; margin-right: 2.8%; margin-top: 2.8%; border: 1px solid rgb(92,188,145); border: 1px solid rgba(92,188,145,1); }
+.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs { padding-top: 40px; }
+.product-subtotal, .product-total, .cart-subtotal td, .shipping td, .total td, .order-total td { text-align:right; padding-right:5px !important; }
+.bundled_table_item { display:none; } /* Remove the "bundled" items from item bundles. */
+td.product-price, td.product-subtotal { text-align:right; }
+.woocommerce .woocommerce-error:before, .woocommerce-page .woocommerce-error:before { background-color: transparent; top: 8px; }
+.woocommerce #content .quantity, .woocommerce .quantity, .woocommerce-page #content .quantity, .woocommerce-page .quantity { width: 40px; }
+.woocommerce .product-price, .woocommerce .product-subtotal { text-align: right; }
+.woocommerce .product-subtotal span.amount { padding-right: 7px; }
+.woocommerce .cart .product-name a { font-size: 14px; }
+.woocommerce .cart .button, .woocommerce .cart input.button, .woocommerce-page .cart .button, .woocommerce-page .cart input.button { float: left; padding: 10px; }
+.woocommerce .cart input.checkout-button { float: right; }
+.woocommerce .cart-collaterals .cart_totals table th, .woocommerce-page .cart-collaterals .cart_totals table th { width: 50%; }
+.cart .cross-sells h2 { font-size: 28px; }
+.woocommerce .cart-collaterals .cross-sells ul.products li, .woocommerce-page .cart-collaterals .cross-sells ul.products li { width: 100%; }
+.woocommerce_message, .woocommerce_info, .woocommerce_error, .woocommerce-message, .woocommerce-info, .woocommerce-error, .ninja-forms-error div, .ninja-forms-success-msg p span, #ninja_forms_form_2_process_msg, .bbp-template-notice.info p { border: 1px solid rgb(0,142,79) !important; border: 1px solid rgba(0,142,79,1) !important; }
+#bbpress-forums #bbp-your-profile fieldset span.description { border: 1px solid rgb(90,186,145); border: 1px solid rgba(90,186,145,1); background-color: rgb(174,242,213); background-color: rgba(174,242,213,1); }
+.woocommerce_message:before, .woocommerce_info:before, .woocommerce_error:before, .woocommerce-message:before, .woocommerce-info:before, .woocommerce-error:before, .ninja-forms-error div:before, .ninja-forms-success-msg p span:before, .bbp-template-notice.info p:before { font-family: WebSymbols !important; color: rgb(91,187,145) !important; color: rgba(91,187,145,1) !important; }
+.woocommerce #content div.product form.cart .button, .woocommerce div.product form.cart .button, .woocommerce-page #content div.product form.cart .button, .woocommerce-page div.product form.cart .button, .woocommerce .woocommerce-error .button, .woocommerce .woocommerce-info .button, .woocommerce .woocommerce-message .button, .woocommerce-page .woocommerce-error .button, .woocommerce-page .woocommerce-info .button, .woocommerce-page .woocommerce-message .button { padding: 10px 20px; }
+.woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-message:before { background-color: transparent; }
+.woocommerce .woocommerce-error:before, .woocommerce .woocommerce-info:before, .woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-error:before, .woocommerce-page .woocommerce-info:before, .woocommerce-page .woocommerce-message:before { -webkit-border-bottom-left-radius: 0; -webkit-border-bottom-right-radius: 0; border-bottom-left-radius: 0; border-bottom-right-radius: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.woocommerce #review_form #respond .form-submit input, .woocommerce-page #review_form #respond .form-submit input { float: right;}
+.woocommerce #review_form #respond p.form-submit:after, .woocommerce-page #review_form #respond p.form-submit:after{ content: ''; width: 0; height: 0; position: relative; display: block; clear:both; }
+
+/* Dealers page styles */
+.more-contact .dropdown-menu { position: relative; top: auto; left: auto; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; border: 0; }
+.more-contact .btn-group.open .dropdown-toggle { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+.more-contact li { list-style: none; }
+.page-template-template-dealers-php p { font-size: 13px; }
+.page-template-template-dealers-php h1 { display: none; }
+.page-template-template-dealers-php h2 { font-size: 34px; }
+.page-template-template-dealers-php h3 { font-size: 24px; }
+.dealer-products .emph { font-style: italic; line-height: normal; color: rgb(91,187,145); color: rgba(91,187,145,1); border-bottom: 1px solid #ddd; padding-bottom: 20px; }
+.dealer-contact p.us, .dealer-contact img { max-height: 286px; }
+.dealer-contact p.us, .dealer-contact p.intl { text-align: left; }
+.dealer-contact p.us span { font-size: 20px; display: block; }
+.dealer-contact p.fax span { font-size: 20px; display: block; }
+.dealer-contact p.intl span { font-size: 16px; display: block; }
+.dealer-contact .form { font-size: 16px; }
+.dealer-contact .input-container { float: left; padding-left: 0; }
+.dealer-contact form p { font-size: 14px; }
+.dealer-contact .input-container input { width: 70%; padding: 6px; }
+.dealer-contact .input-container .preferred-phone, .dealer-contact .input-container .preferred-email { width: auto; }
+.dealer-contact .textarea-container { float: left; }
+.dealer-contact .textarea-container textarea { width: 100%; padding: 6px; height: 84px; }
+.dealer-products img { margin: 0 auto 10px auto; }
+.page-template-template-dealers-php .fine-print { font-size: 14px; }
+.dealer-benefits ul { padding-left: 20px; }
+.dealer-benefits li { font-size: 24px; background: url('../../../img/diamond.png') no-repeat left center; list-style: none; padding: 0 0 1px 20px; }
+.distributors ul { padding-left:0; }
+.distributors li { list-style: none; clear: left; margin: 0 0 10px 0; }
+.distributors li a { line-height: 22px; }
+.distributors li a .dist-container { float: left; margin-right: 20px; width: 135px; }
+.distributors li span { font-size: 24px; }
+.distributors li img { height: 40px; }
+.more-contact { margin-bottom: 30px; }
+.more-contact iframe { max-width: 100%; }
+.more-contact ul { padding-left: 0; }
+.more-contact li { border-bottom: 1px solid rgb(144,144,144); border-bottom: 1px solid rgba(144,144,144,1); padding: 4px 0 10px 0; cursor:pointer; cursor:hand; }
+.more-contact .glyphicon { display: block; padding: 0 10px 0 0; float: left; }
+.more-contact .btn-group { width: 100%; }
+.more-contact p { font-size: 16px; line-height: 12px; padding-left: 24px; }
+.more-contact .dropdown-menu p { font-size: 14px; line-height: 20px; }
+.more-contact p.fine-print { font-size: 13px; padding-left: 0; }
+.more-contact .caption { font-size: 18px; line-height: normal; padding: 20px 0 0 0; }
+.page-template-template-dealers-php .copyright p, .page-template-template-dealers-php .fine-print p { font-size: 13px; }
+.page-template-template-dealers-php .field-wrap.text-wrap.label-inside { width: 60%; }
+.page-template-template-dealers-php .field-wrap.textarea-wrap.label-inside { width: 100%; margin-bottom: 0; }
+.page-template-template-dealers-php .field-wrap.textarea-wrap.label-inside textarea { height: 78px; }
+.page-template-template-dealers-php .field-wrap.submit-wrap.label-above { margin-top: -10px; float: right; }
+iframe .ilErfe-e1YmVc-ZMv3u { display: none; }
+.more-contact iframe { border:0; }
+.more-contact iframe html { border: 1px solid rgb(151,151,151); border: 1px solid rgba(151,151,151,1); }
+iframe #featurelist-scrollable-container { display: none; }
+.page-template-template-dealers-php .footer p { font-size: 13px; }
+
+/* Single */
+.single .masthead { margin-top: 0 !important; }
+.single article img { max-width: 50%; }
+.single article p { text-align:justify; }
+
+/* Default Page */
+.page-template-default article p { font-size: 14px; }
+.page-template-default article hr { margin: 30px 0 20px 0; clear: both; }
+.lead-in { font-size: 20px; margin: 10px 0 30px 0; font-style: italic; color: rgb(91,187,145); color: rgba(91,187,145,1); }
+.answer { margin-bottom: 30px; }
+
+/* Sidebar */
+aside.sidebar ul { padding-left: 0; }
+aside.sidebar li { background: url('../../../img/diamond.png') no-repeat left 4px; list-style: none; padding: 0 0 10px 20px; line-height: 19px; }
+aside.sidebar .sidebar-widget h3 { font-size: 22px; }
+aside.sidebar .sidebar-widget > div { margin-bottom: 40px; }
+aside.sidebar .sidebar-widget > div:first-child h3 { margin-top: 0; }
+aside.sidebar .textarea-wrap.label-above label { font-size: 14px; text-transform: none; }
+
+
+/* Footer */
+.subfooter { background: rgb(32,32,32); background: rgba(32,32,32,1); padding: 30px 0; font-family: VitesseMed; }
+.footer-brand { background: url('../../../img/logo2.png') no-repeat; display: block; width: 74px; height: 59px; text-indent: -20000px; overflow: hidden; background-size: 74px 59px; margin: 0 auto 20px auto; }
+.subfooter ul { padding-left: 0; }
+.subfooter ul li { list-style: none; padding: 0 9px 16px 0; text-align: center; }
+.subfooter ul li a { color: rgb(255,255,255); color: rgba(255,255,255,1); text-transform: uppercase; }
+.subfooter ul li a:hover { color: rgb(91,187,145); color: rgba(91,187,145,1); }
+.subfooter ul.footer-social { margin: 20px auto 78px auto; text-align:center;}
+.subfooter ul.footer-social li:last-child { padding-right: 0; }
+.subfooter ul.footer-social li { float: left; width:33%; }
+.subfooter ul.footer-social li a { text-transform: none; }
+.subfooter ul.footer-social li a:hover { color: rgb(91,187,145); color: rgba(91,187,145,1); }
+.subfooter ul.footer-social li a.youtube { background: url('../../../img/youtube.png') no-repeat; padding: 6px 0 2px 24px; }
+.subfooter ul.footer-social li a.googleplus { background: url('../../../img/gplus.png') no-repeat; padding: 3px 0 2px 24px; }
+.subfooter ul.footer-social li a.facebook { background: url('../../../img/fb.png') no-repeat; padding: 6px 0 2px 14px; }
+.subfooter .contact { color: rgb(255,255,255); color: rgba(255,255,255,1); }
+.subfooter #ninja_forms_form_2_all_fields_wrap { text-align: center; }
+.subfooter .field-wrap.submit-wrap.label-above { float: none; }
+.subfooter .contact .ninja-forms-cont { margin-bottom: 38px; }
+.subfooter .contact .ninja-forms-required-items { font-family: VitesseLt; }
+.subfooter .contact .text-wrap.label-above label, .textarea-wrap.label-above label { font-size: 15px; text-transform: uppercase; }
+.subfooter .contact p { font-family: VitesseLt; font-size: 14px; margin-bottom: 0; letter-spacing: 1px; text-align: center; }
+.subfooter .contact p.emph { font-family: VitesseBook; }
+footer { background: rgb(0,0,0); background: rgba(0,0,0,1); color: rgb(255,255,255); color: rgba(255,255,255,1); font-family: VitesseLt; font-size: 12px; padding: 19px 0 5px 0; }
+footer a { color: rgb(255,255,255); color: rgba(255,255,255,1); text-decoration: underline; }
+footer a:hover { color: rgb(91,187,145); color: rgba(91,187,145,1); text-decoration: none; }
+.copyright { text-align: center; }
+.fine-type { text-align: center; }
+.fine-type a { padding-left: 20px; }
+
+
+/* General / Fixes */
+.woocommerce span.onsale,.woocommerce-page span.onsale {z-index:10;}
+.woocommerce ul.products li.product .onsale, .woocommerce-page ul.products li.product .onsale { right:auto !important; }
+.product-footer { padding: 0 0 30px 0; }
+.woocommerce .woocommerce-breadcrumb, .woocommerce-page .woocommerce-breadcrumb { margin: 5px 0 0 0; }
+.page-description a { color: rgb(91,187,145); color: rgba(91,187,145,1); }
+.page-description a:hover { color: rgb(112,221,173); color: rgba(112,221,173,1); }
+big strong { font-family:VitesseBold; }
+.carousel.menu { display: block;  border: 1px solid red; height: 120px; margin-top: 60px; }
+.carousel.menu ul { list-style-type: none; }
+
+
+/* Helpers */
+.left {float:left !important;margin:auto .5em .5em auto;}
+.carousel-inner .left { top: 0; }
+.right {float:right !important;margin:auto auto .5em .5em;}
+.scale-with-grid {width:100%;}
+.top-flush {margin-top:0 !important; padding-top:0 !important;}
+.wp-caption-text { font-style:italic; }
+.button.add_to_cart_button { display:none; }
+.form-allowed-tags { display: none; }
+.masthead { overflow: hidden; margin: 24px auto 0 auto; }
+.mastheadNO img { min-width: 100%; }
+
+/* Removing "Required" messaging on footer form. */
+.subfooter #ninja_forms_form_2 .ninja-forms-required-items, .subfooter #ninja_forms_form_2 .ninja-forms-req-symbol { display:none; }
+
+/* Removing "Contact Us" form on Forum pages. */
+.bbpress #sidebar #ninja_forms_widget-2 {display:none;}
+
+/* Removing breadcrumb from home page */
+.home.page #breadcrumbs { display:none !important; }
+
+/* Fixing size of icons on home page */
+.hp-grant, .hp-dealer { background-size: 90px 90px; }
+
+/* Styling "Showing results x through x" on the product archives. */
+#results-text-wrap {border-bottom:1px solid #999;border-top:1px solid #999; height:30px; padding:5px;}
+
+/* Remove diamond from first product */
+.products li { background:none !important; }
+
+@media (min-width : 768px) {
+
+  /* Carousel */
+  .carousel-inner > .item > img { height: 288px !important; }
+  .carousel .item { height: 288px !important; }
+  .carousel { height: 262px !important; }
+  .carousel { max-width: 750px; margin: 0 auto; overflow: hidden; }
+  .carousel-inner h1 {font-size:25px;}
+  .carousel-inner p {display:block;font-size:15px;margin-top:-10px; line-height:1.25;}
+  
+  /* Footer */
+
+  .copyright { text-align: left; float: left; }
+  .fine-type { float: right; text-align: left; }
+  
+  /* Subfooter */
+  
+  .footer-brand { margin: 0; }
+  .subfooter ul.footer-social li { float: none; }
+  .subfooter ul.footer-social li a.youtube {  padding-left: 34px; }
+  .subfooter ul.footer-social li a.googleplus {  padding-left: 34px; }
+  .subfooter ul.footer-social li a.facebook {  padding-left: 34px; }
+  .subfooter ul li { list-style: none; padding: 0 0 16px 0; text-align: left; }
+  .subfooter ul.footer-social { margin: 0 0 10px 0; width: auto; }
+  .subfooter #ninja_forms_form_2_all_fields_wrap { text-align: left; } 
+  .subfooter .field-wrap.submit-wrap.label-above { float: right; }
+  .subfooter .contact p { text-align: left; }
+  .navbar-toggle { display: block; }
+  .collapse.in {  display: block !important; }
+  .navbar-collapse.collapse.in { display: block; margin-top: 10px; }
+  .navbar-brand { margin: -10px 10px 0 0 !important; }
+  .industry-news img, .rescue-equipment img, .training-techniques img, .fire-rescue img { float: left; margin: 0 20px 20px 0; }
+  .center-text { text-align: left; }
+  .hp-ask-bud p { width: 32%; }
+  .hp-ask-bud { background: url('../../../img/ask-bud.jpg') no-repeat -118px 0; margin: 10px 0 30px 0; }
+  .hp-subway-evac-system { background: url('../../../img/subway.jpg') no-repeat top left; margin: 10px 0 28px 0; padding-bottom: 32px; }
+  .hp-subway-evac-system h2 { float: right; padding-top: 0; text-align: left; font-size: 30px; }
+  .hp-subway-evac-system small { float: right; clear: both; margin-right: 82px; font-size: 18px; }
+  .hp-subway-evac-system p { width: 57%; text-align: left; font-size: 16px; float: right; }
+  .hp-subway-evac-system a { padding: 10px 44px; float: right; margin-right: 94px; }
+  .woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button { font-size: 13px; max-width: 100%; }
+  .hp-dealer a, .hp-grant a { padding: 10px 44px; }
+  .page-template-template-dealers-php h2 { font-size: 40px; }
+  .page-template-template-dealers-php #ninja_forms_form_3  {background:#dedede; padding:1em 2em 3em 2em;border-radius:5px;} 
+  .dealer-products .emph { line-height:55px; font-size:40px; border-bottom: 0; padding-bottom: 0; padding-top:1em; }
+  .left-border { border-left: 1px solid rgb(144,144,144); border-left: 1px solid rgba(144,144,144,1); }
+  .right-border { border-right: 1px solid rgb(144,144,144); border-right: 1px solid rgba(144,144,144,1); }
+  .dealer-benefits h2 { margin-top:0 !important; }
+  .dealer-benefits ul, .distributors ul { padding-left: 40px; }
+  .wp-caption-text { margin: 10px 0 30px 0; }
+  .woocommerce #content div.product .product_title, .woocommerce div.product .product_title, .woocommerce-page #content div.product .product_title, .woocommerce-page div.product .product_title { margin-top: 0; }
+  .space-bottom { margin-bottom: 20px; }
+  .training-techniques, .fp-forum { padding-bottom: 30px; }
+  .industry-news a, .rescue-equipment a, .training-techniques a, .fire-rescue a { display: inline; }
+  #breadcrumbs { display:none !important; }
+  /* Styles for the 'industry-solutions/sub-menu/ pages. */
+  .tax-product_tag #breadcrumbs { display:none !important; }
+  .tax-product_tag .container.main {margin-top:0;}
+  .tax-product_tag .container.main h1 { display:none; }
+  .masthead { max-width: 750px; }
+  
+  /* Dealers Page */
+  /* ------------------------------ */
+  .align-right {text-align:right;}
+  .page-template-template-dealers-php .smaller p {font-size:85%;margin-bottom: 33px;}
+  .page-template-template-dealers-php .smaller p:last-child {margin-bottom:0;}
+  .page-template-template-dealers-php h3.green a {color: #02ab61; text-decoration:none;}
+  .page-template-template-dealers-php h3 small {display:block; color:#333; font-family:Vitessebold;}
+  .page-template-template-dealers-php #dealers-row-1 {border-right:1px solid #999;}
+  .page-template-template-dealers-php #dealers-row-2 h3 { padding:0 20px !important; line-height:1.5em !important; letter-spacing:.75px;font-size:26px;font-family:helvetica; margin:0;}
+  .page-template-template-dealers-php h2.emph.green {color:#02ab61; margin:1.25em 0 !important; font-size:24px !important; font-family:VitesseBook;text-align: center;}
+  .page-template-template-dealers-php #green-list {padding:0;padding-top:3px;}
+  .page-template-template-dealers-php #green-list div { background: #02ab61; color:white; padding:.5em 3em 1em; width:92%; padding-bottom: 1000px; margin-bottom: -1000px; }
+  .page-template-template-dealers-php #green-list div h3 {font-family:VitesseBook;font-size:35px;}
+  .page-template-template-dealers-php #green-list ul {padding:0 1.25em;}
+  .page-template-template-dealers-php #green-list ul li { list-style-position: outside; font-family:VitesseBook; font-size:20px; line-height:1.5; }
+  .dealers-top-box { padding: 15px 0; background: #efefef; -o-border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+  .dealer-middle-box { overflow: hidden; }
+  .page-template-template-dealers-php #skedco-five-ways { border-left:1px solid #999; }
+  .page-template-template-dealers-php #skedco-five-ways h3 {text-align:center;font-size:30px; margin:0;}
+  .page-template-template-dealers-php #skedco-five-ways small {padding-left:15px;}
+  .page-template-template-dealers-php #skedco-five-ways .scale-to-grid {width:100% !important; }
+  .page-template-template-dealers-php #north-american-distributors { font-size:35px; }
+}
+  
+@media (min-width : 992px) {
+  /* main { background-color: fuchsia; } */
+  body { background-color: rgb(255,255,255); background-color: rgba(255,255,255,1); }
+  /* Nav */
+  .nav ul li { margin-right:2px; }
+  .nav ul li a { font-size: 13px; padding: 15px 9px; }
+  .navbar-toggle { display: none; }
+  .navbar-collapse.collapse { display: block !important; }
+  .collapse.in {  display: none !important; }
+  .navbar-collapse.collapse.in { display: none !important; }
+  .navbar-wrapper-wrapper .container { background: rgb(0,0,0); opacity: .5; }
+  .navbar-header { float: left; }
+  .navbar-wrapper .container { background: transparent; }
+  .navbar { margin-bottom: 20px; }
+  .navbar-brand { height: 103px; position: relative; }
+  .nav ul li { float: left; clear: none; height: 44px; }
+  .nav ul li a { padding: 15px 9px; }
+  .nav ul li .dropdown-menu { display: block; }
+  nav.nav { float: left; }
+  .navbar-collapse.collapse .search-box.collapse.in { position: absolute; right: -15px; bottom: 17px; clear: none; margin-left: 0; padding-bottom: 0; background: transparent; display: block !important; }
+  .navbar-collapse.collapse .search-box.collapse.in input { margin-left: 0; }
+  .nav ul li .dropdown-menu > li > a { padding: 8px; }
+  nav .dropdown-menu { position: absolute !important; background-color: rgb(71,71,71) !important; background-color: rgba(71,71,71,1) !important; margin-left: 0 !important; margin-bottom: 0 !important; }
+  .nav ul li .dropdown-menu { display: none; }
+  .nav ul li:hover .dropdown-menu { display: block; }
+  .masthead h1,.masthead h2, .masthead p {display: block;}
+  .carousel.menu {display:none !important; border: 0; height: 500px; margin-top: 0; }
+  .carousel-caption { bottom: 40px; }
+  .carousel.slide {display:block;}
+  .carousel-caption h1 { font-size: 45px; }
+  .topic-banner ul { margin-bottom: 3px; }
+  .topic-banner-bg { height: 36px; }
+  .topic-banner ul li a { background-size: contain !important; height: 29px; padding: 7px 0 0 36px ; }
+  .hover-shape { top: -25px; }
+  .social-links { float: right; }
+  .navbar .cart { float: right; padding: 0 0 0 20px; height: 40px; margin-top: 9px; }
+  .social-links a { margin-bottom: 0; }
+  aside.sidebar { border-left: 1px solid #ccc; padding: 0 0 0 30px; }
+  .hp-subway-evac-system p { width: 43%; }
+  .page-template-template-dealers-php h2 { font-size: 56px; }
+  .page-template-template-dealers-php p { font-size: 18px; }
+  .dealer-contact p.us span { font-size: 32px; }
+  .dealer-contact p.fax span { font-size: 32px; }
+  .dealer-contact p.intl span { font-size: 24px; }
+  .hp-ask-bud { background: url('../../../img/ask-bud.jpg') no-repeat top right; padding-bottom: 72px; }
+  .page-template-template-dealers-php h2 { font-size: 50px; }
+  .content-group.rescue-industry-news h3, .content-group.rescue-equipment-blog h3, .content-group.life-saving-training-techniques h3, .content-group.fp-forum h3, .content-group.military h3, .content-group h3 { margin-left: -43px; }
+  .content-group { padding: 0 0 0 43px; }
+  #breadcrumbs { display:block !important; position:absolute; z-index:5; width:970px; margin-left:-485px; left:50%; top:115px; font-size:.95em; font-family:VitesseMed; }
+  .tax-product_tag #breadcrumbs { top:-20000px; }
+  .container.main,.container main, main .container { margin-top: 60px; }
+  .woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button { max-width: 78%; }
+  .tax-product_tag .masthead { height: auto; max-width: 1170px; }
+  .tax-product_tag .masthead img { margin-bottom: -146px; }
+  .tax-product_tag .masthead.product_tag .container { min-width: 1045px; padding: 0 120px; width: auto; }
+  .tax-product_tag .masthead.product_tag p { display:block !important; background:#dedede; padding:20px 120px; font-size:20px; line-height:1.5; min-width: 1045px; }
+  .tax-product_tag .masthead.product_tag p em { color:#02ab61; font-style:normal; text-transform:uppercase; }
+  .tax-product_tag .masthead h1, .tax-product_tag .masthead h2, .carousel-caption h1 { width: auto; margin: 0; color: #fff; font-size: 50px; font-weight: bold; text-shadow: 0 0 10px rgb(0,0,0); opacity: .7; margin-left:0; left:0; }
+  .carousel-caption h1 { width: 1170px; margin: 0 auto; color: #fff; font-size: 46px;font-weight: bold; text-shadow: 0 0 10px rgb(0,0,0); opacity: .7; margin-left:100px; left:100px; }
+  .carousel-caption h1  { width:100%; margin-left:0; left:100px; }
+  .tax-product_tag .masthead.product_tag h2, .carousel-caption p { font-size: 22px !important; position: relative !important; padding-left: 30px !important; width: 100% !important; margin-left: 0 !important; text-transform: uppercase !important; margin-bottom: 36px !important; line-height: 28px !important; font-family:VitesseMed; }
+  .carousel-caption p { margin-top: 10px; }
+  .tax-product_tag .masthead.product_tag h2:before, .carousel-caption p:before { content: ''; width: 13px; height: 43px; background: #fff; position: absolute; top: 7px; left: 5px; box-shadow: 0 0 10px rgb(0,0,0); opacity: .7; }
+  .masthead { max-width: 970px; margin: 0 auto; }
+  .carousel-inner > .item > img { height: 398px !important; }
+  .carousel .item { height: 398px !important;  width:992px !important;  }
+  .carousel { height: 398px !important; }
+  .carousel { max-width: 970px; margin: 0 auto; overflow: hidden; }
+
+  /* Dealers */
+  .page-template-template-dealers-php #dealers-row-2 h3 { line-height:1.8em !important; font-size:30px;}
+  .page-template-template-dealers-php h3.green a {font-size:130%;}
+  .page-template-template-dealers-php #green-list ul li {font-size:24px;}
+}
+
+@media (min-width : 1200px) {
+  .carousel-caption h1 { font-size: 56px; }
+  .panel-bottom input { width: 248px; margin-right: 28px; }
+  .panel-bottom .btn.btn-default { display: inline-block; margin: auto; }
+  .panel-bottom form { width: auto; }
+  .subfooter ul { padding-left: 40px; }
+  main { background: white; }
+  .nav ul li { margin: 5px 14px 0 0; }
+  .nav ul li a { padding: 15px 9px; font-size: 14px; }
+  .hp-subway-evac-system a { margin-right: 180px; }
+  .hp-subway-evac-system h2 { margin: 80px 84px 0 0; }
+  .hp-subway-evac-system small { margin-right: 167px; }
+  .hp-dealer, .hp-grant { padding: 0 160px 0 100px; }
+  /* .hp-ask-bud { background: url('../../../img/ask-bud.jpg') no-repeat 80px 0; } */
+  .carousel { max-width: 1170px; margin: 0 auto; overflow: hidden; }
+  .hp-ask-bud { background: url('../../../img/ask-bud.jpg') no-repeat top right; }
+  .masthead { max-width: 1170px; margin: 0 auto; }
+  #breadcrumbs { display:block !important; position:absolute; z-index:5; width:1170px; margin-left:-585px; left:50%; top:115px; font-size:.95em; font-family:VitesseMed; }
+  .tax-product_tag .masthead.product_tag p { width: 1200px; }
+
+  /* Carousel and menu */
+  .carousel { height: 470px !important; }
+  .carousel-caption { bottom: 80px !important; }
+  .carousel-inner > .item > img { height: 470px !important; }
+  .carousel .item { height: 470px !important; width:1170px !important;}
+
+  .topic-banner-bg { height: 42px; }
+  .topic-banner ul { margin-bottom: 4px; }
+
+  .topic-banner ul li a { padding: 11px 0 0 44px; height: 34px; }
+  .hover-shape { top: -25px; }
+  a.btn-carousel { bottom: -55px; height: 93px; width: 226px; right: -168px; }
+
+  /* Dealers */
+  .page-template-template-dealers-php #dealers-row-2 h3 { line-height:1.95em !important; font-size:33px;}
+  .page-template-template-dealers-php h3.green a {font-size:150%;}
+  .page-template-template-dealers-php #green-list ul li {font-size:30px;}
+}
+
+/* Sort-of hack (max-width) for the mobile menu */
+@media (max-width : 992px) {
+	.navbar-inverse { margin-left:-15px; margin-right:-15px; margin-top:-14px !important; }
+	.navbar-wrapper .container { background: rgb(1,1,1) !important; background: rgba(1,1,1,1) !important; height:35px !important; }
+	.navbar-collapse, .navbar-collapsing { background: rgb(1,1,1) !important; background:rgba(1,1,1,1); margin:0 0 0 -15px !important; padding-left:15px !important; }
+	.navbar-brand { background-size: 48.5px 38.5px !important; background-position:0 15px; }
+	.content-group span small { display:inline !important; float:none; }
+	.content-group span small:before { content:'\2022'; font-weight:bold; padding-right:.25em; }
+}
+
+@media (max-width : 768px) {
+	.navbar-collapse, .navbar-collapsing { padding-left:40px !important; }
+}

@@ -1,0 +1,2 @@
+
+	<small class="block" style="font-size:small;clear:both;"><span style="width:85px;display:block;float:left;height:2em;"><?php echo strftime("%m-%e-%Y",strtotime(get_the_date())) ?></span><a href="<?php the_permalink() ?>"><?php the_title() ?></a></small>

@@ -1,0 +1,81 @@
+/* VitesseBold */
+big strong,.page-template-template-dealers-php h3 small {
+
+	font-family: 'Vitesse SSm A', 'Vitesse SSm B' !important; font-weight: 700; font-style: normal;
+
+}
+
+
+
+/* VitesseMed */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input.btn-padded,
+.nav ul li a,
+.btn-primary,
+.topic-banner ul li a,
+.hp-ask-bud a,
+.hp-subway-evac-system a,
+.hp-sked-basic-rescue-system a,
+.woocommerce #content input.button,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce-page #content input.button,
+.woocommerce-page #respond input#submit,
+.woocommerce-page a.button,
+.woocommerce-page button.button,
+.woocommerce-page input.button,
+.hp-dealer a,
+.hp-grant a,
+.woocommerce #content input.button.alt,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce-page #content input.button.alt,
+.woocommerce-page #respond input#submit.alt,
+.woocommerce-page a.button.alt,
+.woocommerce-page button.button.alt,
+.woocommerce-page input.button.alt,
+.dealer-contact .textarea-container button,
+.page-template-template-dealers-php .field-wrap.submit-wrap.label-above input,
+.subfooter,
+.subfooter .contact #nf_submit_2 input,
+#breadcrumbs,
+.carousel-caption p {
+
+	font-family: 'Vitesse SSm A','Vitesse SSm B' !important; font-weight: 500; font-style: normal;
+
+}
+
+/* VitesseBook */
+.hp-ask-bud p, 
+.hp-subway-evac-system p, 
+.hp-sked-basic-rescue-system p, 
+.subfooter .contact p.emph, 
+.page-template-template-dealers-php h2.emph.green, 
+.page-template-template-dealers-php #green-list div h3, 
+.page-template-template-dealers-php #green-list ul li {
+
+	font-family: 'Vitesse SSm A', 'Vitesse SSm B' !important; font-weight: 400; font-style: normal;
+
+}
+
+
+
+/* VitesseLt */
+small, 
+.fp-forum h1, 
+.subfooter .contact .ninja-forms-required-items, 
+.subfooter .contact p, 
+footer {
+
+	font-family: 'Vitesse SSm A', 'Vitesse SSm B' !important; font-weight: 300; font-style: normal;
+
+}
